@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: care-taker
+  devtools:
+    livereload:
+      enabled: true
+    restart:
+      trigger-file: restart-trigger
+server:
+  servlet:
+    context-path: /member-api
+management:
+  server:
+    port: 8080
+  endpoints:
+    web:
+      exposure:
+        include:
+        - mappings
+        - info
+        - health
+        - config
+zipcode:
+  serviceURL: http://postalpincode.in/api/pincode/%d
