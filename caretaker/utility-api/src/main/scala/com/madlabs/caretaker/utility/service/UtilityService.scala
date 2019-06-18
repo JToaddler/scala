@@ -1,16 +1,14 @@
-package com.madlabs.caretaker.service
+package com.madlabs.caretaker.utility.service
 
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.stereotype.Component
 import org.springframework.web.client.RestTemplate
 
-import com.madlabs.caretaker.model.ZipCodeDetail
-import org.springframework.web.util.UriBuilderFactory
-import org.springframework.web.util.UriComponentsBuilder
+import com.madlabs.caretaker.bo.ZipCodeDetail
 
 @Component
-class MemberService {
+class UtilityService {
 
   @Value("${zipcode.serviceURL}")
   var serviceURL: String = null;

@@ -1,6 +1,6 @@
 spring:
   application:
-    name: care-taker
+    name: utility-api
   devtools:
     livereload:
       enabled: true
@@ -8,10 +8,9 @@ spring:
       trigger-file: restart-trigger
 server:
   servlet:
-    context-path: /member-api
+    context-path: /utility-api
+  port: 8080
 management:
-  server:
-    port: 8080
   endpoints:
     web:
       exposure:
@@ -21,3 +20,5 @@ management:
         - health
         - config
         - actuator
+zipcode:
+  serviceURL: http://postalpincode.in/api/pincode/%d

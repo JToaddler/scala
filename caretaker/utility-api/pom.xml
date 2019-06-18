@@ -9,10 +9,10 @@
 		<version>2.1.5.RELEASE</version>
 	</parent>
 	<groupId>madlabs.caretaker</groupId>
-	<artifactId>member-api</artifactId>
+	<artifactId>utility-api</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>member-api</name>
-	<description>Member API - Scala with  Spring Boot</description>
+	<name>utility-api</name>
+	<description>Utility API - Scala with  Spring Boot</description>
 
 	<properties>
 		<java.version>1.8</java.version>

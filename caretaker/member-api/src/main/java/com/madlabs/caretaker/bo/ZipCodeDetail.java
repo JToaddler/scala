@@ -1,4 +1,4 @@
-package com.madlabs.caretaker.model;
+package com.madlabs.caretaker.bo;
 
 import java.util.List;
 
