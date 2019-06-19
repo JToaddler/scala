@@ -17,7 +17,7 @@ class UtilityController {
   @Autowired
   val memberService: UtilityService = null;
 
-  @RequestMapping(path = Array("/getZipCodeDetail/{zipCode}"), method = Array(RequestMethod.GET), consumes = Array(MediaType.APPLICATION_JSON_VALUE))
+  @RequestMapping(path = Array("/getZipCodeDetail/{zipCode}"), method = Array(RequestMethod.GET), produces = Array(MediaType.APPLICATION_JSON_VALUE))
   def getZipCodeInfo(@PathVariable zipCode: Long): ZipCodeDetail @ResponseBody = {
     println("ZIP Code : " + zipCode)
     memberService getzipCodeDetail zipCode

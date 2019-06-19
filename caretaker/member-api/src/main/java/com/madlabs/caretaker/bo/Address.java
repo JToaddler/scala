@@ -9,16 +9,12 @@ public class Address {
 
 	private String line1;
 	private String line2;
-	private String city;
 	private String landMark;
 	private int pinCode;
 
 	private String state;
 
-	public String getCity() {
-		return city;
-	}
-
+	
 	public String getLandMark() {
 		return landMark;
 	}
@@ -29,10 +25,6 @@ public class Address {
 
 	public String getState() {
 		return state;
-	}
-
-	public void setCity(String city) {
-		this.city = city;
 	}
 
 	public void setLandMark(String landMark) {
