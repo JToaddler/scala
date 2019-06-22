@@ -6,6 +6,7 @@ import org.springframework.stereotype.Component
 import org.springframework.web.client.RestTemplate
 
 import com.madlabs.caretaker.bo.ZipCodeDetail
+import java.io.FileNotFoundException
 
 @Component
 class UtilityService {

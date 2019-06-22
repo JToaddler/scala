@@ -1,6 +1,6 @@
 package madlabs.scala
  
-class ScalaClass {
+class Test {
  
   private val myName: String = "I am a Scala class";
  

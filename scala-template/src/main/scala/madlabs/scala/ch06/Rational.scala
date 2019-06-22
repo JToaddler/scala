@@ -1,5 +1,9 @@
 package madlabs.scala.ch06
 
+import java.io.IOException
+import java.io.FileNotFoundException
+import java.io.FileReader
+
 class Rational(n: Int, d: Int) {
 
   require(d != 0, "Denominator should be greater than 0")
@@ -37,5 +41,13 @@ class Rational(n: Int, d: Int) {
   def -(that: Rational): Rational = new Rational(numer * that.denom - that.numer * denom, denom * that.denom)
 
   //implicit def intToRational(x: Int) = new Rational(x)
-
+  def something() {
+    try {
+      val f = new FileReader("input.txt")
+      // Use and close file
+    } catch {
+      case ex: IOException           => // Handle other I/O error
+      case ex: FileNotFoundException => // Handle missing file
+    }
+  }
 }

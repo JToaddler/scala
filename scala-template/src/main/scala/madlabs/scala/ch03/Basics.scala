@@ -1,6 +1,7 @@
 package madlabs.scala.ch03
 
 import scala.collection.mutable.Map
+import java.io.File
 
 object ArrayTest {
 
@@ -33,6 +34,25 @@ object ArrayTest {
       1 -> "I", 2 -> "II", 3 -> "III", 4 -> "IV", 5 -> "V")
     println(romanNumeral)
 
+    val result = for (index <- 1 to 10) yield (index + 1)
+    println(" Result :" + result.last)
+
+    val filesHere = new File(".").listFiles()
+
+    def fileLines(file: java.io.File) = scala.io.Source.fromFile(file).getLines().toList
+
+    val forLineLengths =
+      for {
+        file <- filesHere
+        if file.getName.endsWith(".scala")
+        line <- fileLines(file)
+        trimmed = line.trim
+        if trimmed.matches(".*for.*")
+      } yield trimmed.length
+
+    (x: Int) => x + 1
+
+    
   }
 
 }
